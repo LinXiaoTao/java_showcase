@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+Agent-Class: com.leo.instrumentation.LoadedAgent
+Created-By: 1.8.0_121
