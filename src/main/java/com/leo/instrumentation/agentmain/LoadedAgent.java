@@ -1,8 +1,9 @@
-package com.leo.instrumentation;
+package com.leo.instrumentation.agentmain;
 
 import java.lang.instrument.Instrumentation;
 
 /**
+ * 使用agentmain方法代理
  * Created on 2017/2/27 下午7:43
  * leo linxiaotao1993@vip.qq.com
  */

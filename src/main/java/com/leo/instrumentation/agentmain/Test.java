@@ -1,4 +1,4 @@
-package com.leo.instrumentation;
+package com.leo.instrumentation.agentmain;
 
 import com.sun.tools.attach.AgentInitializationException;
 import com.sun.tools.attach.AgentLoadException;
@@ -8,6 +8,7 @@ import com.sun.tools.attach.VirtualMachine;
 import java.io.IOException;
 
 /**
+ * 通过动态加载代理，来实现对字节码操作
  * Created on 2017/2/27 下午7:47
  * leo linxiaotao1993@vip.qq.com
  */
