@@ -19,6 +19,7 @@ public class TestTransformer implements ClassFileTransformer {
 
     @Override
     public byte[] transform(ClassLoader loader, String className, Class<?> classBeingRedefined, ProtectionDomain protectionDomain, byte[] classfileBuffer) throws IllegalClassFormatException {
+
         if (!className.endsWith("TestAgent"))
             return classfileBuffer;
         //读取一个类，为类访问者(ClassVisitor)提供类解析

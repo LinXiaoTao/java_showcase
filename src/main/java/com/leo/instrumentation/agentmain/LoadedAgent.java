@@ -11,9 +11,12 @@ public class LoadedAgent {
 
     //会自动调用的代理方法
     public static void agentmain(String args, Instrumentation instrumentation){
-        //打印类名
+        System.out.println("===================================================================================");
+        System.out.println("执行到agentmain");
         Class[] classes = instrumentation.getAllLoadedClasses();
         for (Class clazz : classes)
-            System.out.println(clazz.getName());
+//            if (clazz.getName().endsWith("ProcessBuilder"))
+                System.out.println(clazz.getName());
+        System.out.println("===================================================================================");
     }
 }
