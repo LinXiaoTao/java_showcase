@@ -16,7 +16,8 @@ import java.security.ProtectionDomain;
 public class TimingTransformer implements ClassFileTransformer {
 
     @Override
-    public byte[] transform(ClassLoader loader, String className, Class<?> classBeingRedefined, ProtectionDomain protectionDomain, byte[] classfileBuffer) throws IllegalClassFormatException {
+    public byte[] transform(ClassLoader loader, String className, Class<?> classBeingRedefined, ProtectionDomain protectionDomain
+            , byte[] classfileBuffer) throws IllegalClassFormatException {
         ClassReader classReader = new ClassReader(classfileBuffer);
         ClassWriter writer = new ClassWriter(classReader, ClassWriter.COMPUTE_MAXS);
         TimingClassVisitor timingClassVisitor = new TimingClassVisitor(Opcodes.ASM5, writer);
