@@ -54,7 +54,7 @@ public class CompilerTest {
     static class StringSourceJavaObject extends SimpleJavaFileObject {
         private String mContent;
 
-        public StringSourceJavaObject(String name, String content) {
+        StringSourceJavaObject(String name, String content) {
             super(URI.create("string:///" + name.replace('.', '/') + Kind.SOURCE.extension), Kind.SOURCE);
             mContent = content;
         }
